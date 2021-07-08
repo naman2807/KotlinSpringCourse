@@ -8,5 +8,5 @@ Project Name: springcourseinkotlin
 Date: 08-07-2021
  */
 
-class Bank {
+class Bank(private val accountNumber: String) {
 }
