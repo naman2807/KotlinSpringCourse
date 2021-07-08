@@ -16,7 +16,7 @@ Date: 08-07-2021
 class MockBankDataSource: BankDataSource {
 
     override fun getBanks(): Collection<Bank> {
-        return emptyList()
+        return listOf(Bank("", 0.0, 1))
     }
 }
 
