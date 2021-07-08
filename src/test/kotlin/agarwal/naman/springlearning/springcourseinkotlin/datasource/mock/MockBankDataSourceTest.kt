@@ -16,7 +16,18 @@ internal class MockBankDataSourceTest{
         val banks = mockBankDataSource.getBanks()
          
          // then
-//        assertThat(banks).isNotEmpty
-        assertThat(banks).allSatisfy { it.accountNumber.isNotBlank()}
+        assertThat(banks).isNotEmpty
+    }
+
+    @Test
+    fun `should provide some mock data`(){
+         // given
+
+
+         // when
+
+
+         // then
+
     }
 }
