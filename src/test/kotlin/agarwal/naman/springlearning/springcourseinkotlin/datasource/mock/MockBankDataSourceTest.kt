@@ -4,15 +4,17 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 internal class MockBankDataSourceTest{
+    private val mockBankDataSource = MockBankDataSource()
+
     @Test
-    fun `should `(){
+    fun `should provide a collection of banks`(){
          // given
-         
+
          
          // when
-         
+
          
          // then
-         
+
     }
 }
