@@ -9,4 +9,6 @@ Date: 08-07-2021
  */
 
 interface BankDataSource {
+
+    fun getBanks()
 }
