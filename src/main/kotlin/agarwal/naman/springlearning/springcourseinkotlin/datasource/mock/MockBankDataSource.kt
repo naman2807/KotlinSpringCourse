@@ -14,7 +14,7 @@ Date: 08-07-2021
 
 @Repository
 class MockBankDataSource: BankDataSource {
-    val banks = listOf(Bank("", 0.0, 1))
+    val banks = listOf(Bank("123", 1.2, 1))
 
     override fun getBanks(): Collection<Bank> = banks
 }
