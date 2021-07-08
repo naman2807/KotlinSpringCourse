@@ -12,5 +12,5 @@ Date: 08-07-2021
 
 interface BankDataSource {
 
-    fun getBanks() : Collection<Bank>
+    fun retrieveBanks() : Collection<Bank>
 }

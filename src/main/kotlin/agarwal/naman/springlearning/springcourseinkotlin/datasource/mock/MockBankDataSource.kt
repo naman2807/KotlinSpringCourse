@@ -18,7 +18,7 @@ class MockBankDataSource: BankDataSource {
                         Bank("234",2.3,2),
                         Bank("456",1.0,0))
 
-    override fun getBanks(): Collection<Bank> = banks
+    override fun retrieveBanks(): Collection<Bank> = banks
 }
 
 //@Repository marks MockBankDataSource class as Spring Boot bean. So this adds it to application context
