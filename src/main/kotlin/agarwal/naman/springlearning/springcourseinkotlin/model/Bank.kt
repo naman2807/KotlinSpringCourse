@@ -8,5 +8,5 @@ Project Name: springcourseinkotlin
 Date: 08-07-2021
  */
 
-class Bank(private val accountNumber: String, private val trust: Double) {
+class Bank(private val accountNumber: String, private val trust: Double, private val transactionFee: Int) {
 }
