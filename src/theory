@@ -1,0 +1,18 @@
+          WEB LAYER
+     (Controller, Rest mappings)
+             |
+             |
+             |
+             V
+         SERVICE LAYER
+      (Services, Business Logic)
+             |
+             |
+             |
+             V
+          DATA LAYER
+       (Models, Serialization)
+
+1. Data layer: Entities like here Bank which act as data model.
+2. Service Layer: It knows how to retrieve bank, update bank, delete bank etc.
+3. Web Layer: Do all REST operations and other operations related web.
