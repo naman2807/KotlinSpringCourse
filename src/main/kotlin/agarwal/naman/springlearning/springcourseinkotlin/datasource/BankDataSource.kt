@@ -1,5 +1,7 @@
 package agarwal.naman.springlearning.springcourseinkotlin.datasource;
 
+import agarwal.naman.springlearning.springcourseinkotlin.model.Bank
+
 /**
 Created By: Naman Agarwal
 User ID: naman2807
@@ -10,5 +12,5 @@ Date: 08-07-2021
 
 interface BankDataSource {
 
-    fun getBanks()
+    fun getBanks() : Collection<Bank>
 }
