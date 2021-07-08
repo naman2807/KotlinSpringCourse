@@ -16,7 +16,7 @@ Date: 08-07-2021
 class MockBankDataSource: BankDataSource {
 
     override fun getBanks(): Collection<Bank> {
-        TODO("Not yet implemented")
+        return emptyList()
     }
 }
 
