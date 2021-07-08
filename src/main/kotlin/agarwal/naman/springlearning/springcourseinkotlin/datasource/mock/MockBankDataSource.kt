@@ -16,9 +16,7 @@ Date: 08-07-2021
 class MockBankDataSource: BankDataSource {
     val banks = listOf(element = Bank("", 0.0, 1))
 
-    override fun getBanks(): Collection<Bank> {
-        return listOf(element = Bank("", 0.0, 1))
-    }
+    override fun getBanks(): Collection<Bank> = banks
 }
 
 //@Repository marks MockBankDataSource class as Spring Boot bean. So this adds it to application context
