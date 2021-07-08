@@ -1,6 +1,7 @@
 package agarwal.naman.springlearning.springcourseinkotlin.datasource.mock
 
-import org.junit.jupiter.api.Assertions.*
+import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 internal class MockBankDataSourceTest{
@@ -15,6 +16,6 @@ internal class MockBankDataSourceTest{
         val banks = mockBankDataSource.getBanks()
          
          // then
-
+        assertThat(banks).isNotEmpty
     }
 }
