@@ -2,6 +2,8 @@ package agarwal.naman.springlearning.springcourseinkotlin.service
 
 import agarwal.naman.springlearning.springcourseinkotlin.datasource.BankDataSource
 import agarwal.naman.springlearning.springcourseinkotlin.datasource.mock.MockBankDataSource
+import io.mockk.mockk
+import io.mockk.verify
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
@@ -19,7 +21,7 @@ internal class BankServiceTest{
          val banks = bankService.getBanks()
          
          // then
-
+        verify { bankDataSource.retrieveBanks() }
     }
 
 }
