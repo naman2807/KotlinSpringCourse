@@ -13,13 +13,13 @@ internal class BankServiceTest{
     @Test
     fun `should call its datasource to retrieve banks`(){
          // given
-         
+
          
          // when
-         
+         val banks = bankService.getBanks()
          
          // then
-         
+
     }
 
 }
