@@ -1,6 +1,8 @@
 package agarwal.naman.springlearning.springcourseinkotlin.service;
 
+import agarwal.naman.springlearning.springcourseinkotlin.datasource.BankDataSource
 import agarwal.naman.springlearning.springcourseinkotlin.datasource.mock.MockBankDataSource
+import agarwal.naman.springlearning.springcourseinkotlin.model.Bank
 import org.springframework.stereotype.Service
 
 /**
@@ -12,8 +14,10 @@ Date: 20-07-2021
  */
 
 @Service
-class BankService(private val mockBankDataSource: MockBankDataSource) {
-
+class BankService(private val bankDataSource: BankDataSource) {
+        fun getBanks() : Collection<Bank>{
+            return emptyList()
+        }
 }
 
 // @Service: Like @Repository annotation, it tells spring boot to make this bean/class or an object of
