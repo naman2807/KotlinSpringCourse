@@ -13,3 +13,7 @@ Date: 20-07-2021
 @RestController
 class BankController {
 }
+
+/**
+ * @RestController: Tells spring boot to consider it as a bean and it will be part of application context.
+ */
