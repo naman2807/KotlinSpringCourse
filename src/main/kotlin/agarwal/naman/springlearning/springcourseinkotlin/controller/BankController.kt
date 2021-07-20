@@ -20,7 +20,7 @@ class BankController(private val service: BankService) {
 
     @GetMapping("/get")
     fun getBanks(): Collection<Bank>{
-
+        return service.getBanks()
     }
 }
 
