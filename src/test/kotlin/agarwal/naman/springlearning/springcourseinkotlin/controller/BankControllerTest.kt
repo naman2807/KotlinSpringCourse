@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.web.servlet.MockMvc
+import org.springframework.test.web.servlet.get
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -17,8 +18,8 @@ internal class BankControllerTest{
     @Test
     fun `should return all banks`(){
          // given
-         
-         
+        mockMvc.get("/api/banks")
+
          // when
          
          
@@ -39,6 +40,8 @@ internal class BankControllerTest{
  * it is responsible for initializing a object of this type and assigning it to this variable.
  *
  * @AutoConfigureMockMvc: @SpringBootTest will only initialize our own application context(i.e classes
- * we had created). To create object of MockMvc, we use this annotation. Without this annotation,
+ * we had created. It will give error because when initializing application context, it will observe
+ * that this MockMvc variable is uninitialized and it will throw error ).
+ * To create object of MockMvc, we use this annotation. Without this annotation,
  * @Autowired notation will also not work.
  */
