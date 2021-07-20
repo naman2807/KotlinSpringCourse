@@ -1,6 +1,7 @@
 package agarwal.naman.springlearning.springcourseinkotlin.controller
 
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
@@ -12,6 +13,18 @@ internal class BankControllerTest{
 
     @Autowired
     lateinit var mockMvc: MockMvc
+    
+    @Test
+    fun `should `(){
+         // given
+         
+         
+         // when
+         
+         
+         // then
+         
+    }
 }
 
 /**
