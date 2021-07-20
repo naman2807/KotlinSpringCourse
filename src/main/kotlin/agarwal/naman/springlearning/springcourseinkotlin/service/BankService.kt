@@ -1,5 +1,6 @@
 package agarwal.naman.springlearning.springcourseinkotlin.service;
 
+import agarwal.naman.springlearning.springcourseinkotlin.datasource.mock.MockBankDataSource
 import org.springframework.stereotype.Service
 
 /**
@@ -11,7 +12,7 @@ Date: 20-07-2021
  */
 
 @Service
-class BankService {
+class BankService(private val mockBankDataSource: MockBankDataSource) {
 
 }
 
