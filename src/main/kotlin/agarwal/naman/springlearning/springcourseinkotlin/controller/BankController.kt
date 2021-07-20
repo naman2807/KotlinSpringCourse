@@ -1,5 +1,7 @@
 package agarwal.naman.springlearning.springcourseinkotlin.controller;
 
+import agarwal.naman.springlearning.springcourseinkotlin.model.Bank
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -14,6 +16,11 @@ Date: 20-07-2021
 @RestController
 @RequestMapping("/api/banks")
 class BankController {
+
+    @GetMapping("/get")
+    fun getBanks(): Collection<Bank>{
+
+    }
 }
 
 /**
