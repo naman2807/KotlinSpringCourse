@@ -19,6 +19,8 @@ internal class BankControllerTest{
     fun `should return all banks`(){
          // given
         mockMvc.get("/api/banks")
+            .andDo { print() }
+            .andExpect { status { isOk() } }
 
          // when
          
