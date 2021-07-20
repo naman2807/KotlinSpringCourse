@@ -16,7 +16,7 @@ Date: 20-07-2021
 @Service
 class BankService(private val bankDataSource: BankDataSource) {
         fun getBanks() : Collection<Bank>{
-            return emptyList()
+            return bankDataSource.retrieveBanks()
         }
 }
 
