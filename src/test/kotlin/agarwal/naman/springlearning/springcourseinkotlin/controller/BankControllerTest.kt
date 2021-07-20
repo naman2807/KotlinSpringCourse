@@ -15,7 +15,7 @@ internal class BankControllerTest{
     lateinit var mockMvc: MockMvc
     
     @Test
-    fun `should `(){
+    fun `should return all banks`(){
          // given
          
          
