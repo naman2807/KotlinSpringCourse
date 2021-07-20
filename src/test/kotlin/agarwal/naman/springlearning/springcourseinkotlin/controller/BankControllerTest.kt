@@ -20,7 +20,10 @@ internal class BankControllerTest{
          // when/then
         mockMvc.get("/api/banks/get")
             .andDo { print() }
-            .andExpect { status { isOk() } }
+            .andExpect {
+                status { isOk() }
+                jsonPath("${0}.accountNumber") {value("abcdef")}
+            }
     }
 }
 
