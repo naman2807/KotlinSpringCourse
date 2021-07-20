@@ -2,6 +2,7 @@ package agarwal.naman.springlearning.springcourseinkotlin.service
 
 import agarwal.naman.springlearning.springcourseinkotlin.datasource.BankDataSource
 import agarwal.naman.springlearning.springcourseinkotlin.datasource.mock.MockBankDataSource
+import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
 import org.junit.jupiter.api.Assertions.*
@@ -15,7 +16,7 @@ internal class BankServiceTest{
     @Test
     fun `should call its datasource to retrieve banks`(){
          // given
-
+        every { bankDataSource.retrieveBanks() } returns emptyList()
          
          // when
          val banks = bankService.getBanks()
