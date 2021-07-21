@@ -3,6 +3,7 @@ package agarwal.naman.springlearning.springcourseinkotlin.controller;
 import agarwal.naman.springlearning.springcourseinkotlin.model.Bank
 import agarwal.naman.springlearning.springcourseinkotlin.service.BankService
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -23,9 +24,9 @@ class BankController(private val service: BankService) {
         return service.getBanks()
     }
 
-    @GetMapping("/get/")
-    fun getBank(accountNumber : String){
-
+    @GetMapping("/get/{accountNumber}")
+    fun getBank(@PathVariable accountNumber : String){
+        service.getBank(accountNumber)
     }
 }
 
