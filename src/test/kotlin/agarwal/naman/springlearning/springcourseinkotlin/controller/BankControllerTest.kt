@@ -86,6 +86,7 @@ internal class BankControllerTest{
              // when/then
             mockMvc.post("api/banks/post")
                 .andDo { print() }
+                .andExpect {  }
              
         }
     }
