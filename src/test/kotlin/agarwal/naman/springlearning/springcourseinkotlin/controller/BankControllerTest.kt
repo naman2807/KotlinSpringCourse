@@ -58,7 +58,7 @@ internal class BankControllerTest{
         }
         
         @Test
-        fun `should return Not Found if account number does not exist`(){
+        fun `should return NOT FOUND if account number does not exist`(){
              // given
              val accountNumber = "does_not_exist"
              
