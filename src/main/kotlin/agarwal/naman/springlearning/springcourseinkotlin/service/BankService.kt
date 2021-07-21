@@ -17,7 +17,7 @@ Date: 20-07-2021
 class BankService(private val bankDataSource: BankDataSource) {
         fun getBanks() : Collection<Bank> = bankDataSource.retrieveBanks()
         fun getBank(accountNumber: String): Bank {
-                return bankDataSource.getBank(accountNumber)
+                return bankDataSource.retrieveBank(accountNumber)
         }
 }
 
