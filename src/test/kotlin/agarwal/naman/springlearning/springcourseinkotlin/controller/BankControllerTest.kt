@@ -1,7 +1,10 @@
 package agarwal.naman.springlearning.springcourseinkotlin.controller
 
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.DisplayName
+import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.TestInstance
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
@@ -15,6 +18,13 @@ internal class BankControllerTest{
 
     @Autowired
     lateinit var mockMvc: MockMvc
+
+    @Nested
+    @DisplayName("")
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    inner class GetBanks{
+
+    }
     
     @Test
     fun `should return all banks`(){
@@ -31,15 +41,15 @@ internal class BankControllerTest{
     @Test
     fun `should return the bank with given account number`(){
          // given
-         val accountNumber = "1234"
+         val accountNumber = 123
          
          // when/then
-         mockMvc.get("/api/banks/$accountNumber")
+         mockMvc.get("/api/banks/get/$accountNumber")
              .andDo { print() }
              .andExpect {
                  status { isOk() }
                  content { contentType(MediaType.APPLICATION_JSON) }
-                 jsonPath("$.trust") {value("3.14")}
+                 jsonPath("$.trust") {value("1.2")}
              }
          
     }
