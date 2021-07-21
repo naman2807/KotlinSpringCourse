@@ -13,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.get
+import org.springframework.test.web.servlet.post
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -82,10 +83,8 @@ internal class BankControllerTest{
              // given
              val newBank = Bank("1234",2.3,5)
              
-             // when
-
-             
-             // then
+             // when/then
+            mockMvc.post("api/banks/post")
              
         }
     }
