@@ -22,6 +22,11 @@ class BankController(private val service: BankService) {
     fun getBanks(): Collection<Bank>{
         return service.getBanks()
     }
+
+    @GetMapping("/get/")
+    fun getBank(accountNumber : String){
+
+    }
 }
 
 /**

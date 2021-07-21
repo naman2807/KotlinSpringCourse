@@ -33,12 +33,10 @@ internal class BankControllerTest{
          // given
          val accountNumber = "1234"
          
-         // when
+         // when/then
          mockMvc.get("/api/banks/$accountNumber")
              .andDo { print() }
              .andExpect { status { isOk() } }
-         
-         // then
          
     }
 }
