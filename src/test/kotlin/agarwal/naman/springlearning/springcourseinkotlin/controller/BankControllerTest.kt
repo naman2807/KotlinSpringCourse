@@ -5,10 +5,10 @@ import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
+import org.junit.jupiter.api.TestInstance.Lifecycle.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.context.Lifecycle
 import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.get
@@ -22,7 +22,7 @@ internal class BankControllerTest{
 
     @Nested
     @DisplayName("getBanks()")
-    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @TestInstance(PER_CLASS)
     inner class GetBanks{
         @Test
         fun `should return all banks`(){
@@ -39,7 +39,7 @@ internal class BankControllerTest{
 
     @Nested
     @DisplayName("getBank()")
-    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    @TestInstance(PER_CLASS)
     inner class GetBank{
         @Test
         fun `should return the bank with given account number`(){
@@ -55,6 +55,18 @@ internal class BankControllerTest{
                     jsonPath("$.trust") {value("1.2")}
                 }
 
+        }
+        
+        @Test
+        fun `should `(){
+             // given
+             
+             
+             // when
+             
+             
+             // then
+             
         }
     }
 
