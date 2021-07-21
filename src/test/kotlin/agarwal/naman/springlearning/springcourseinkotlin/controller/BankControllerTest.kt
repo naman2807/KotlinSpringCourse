@@ -38,7 +38,7 @@ internal class BankControllerTest{
     }
 
     @Nested
-    @DisplayName("")
+    @DisplayName("getBank()")
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     inner class GetBank{
 
