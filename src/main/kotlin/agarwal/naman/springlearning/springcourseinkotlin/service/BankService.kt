@@ -16,6 +16,9 @@ Date: 20-07-2021
 @Service
 class BankService(private val bankDataSource: BankDataSource) {
         fun getBanks() : Collection<Bank> = bankDataSource.retrieveBanks()
+        fun getBank(accountNumber: String) {
+
+        }
 }
 
 // @Service: Like @Repository annotation, it tells spring boot to make this bean/class or an object of
