@@ -23,21 +23,19 @@ internal class BankControllerTest{
     @DisplayName("getBanks()")
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     inner class GetBanks{
+        @Test
+        fun `should return all banks`(){
+            // when/then
+            mockMvc.get("/api/banks/get")
+                .andDo { print() }
+                .andExpect {
+                    status { isOk() }
+                    content { contentType(MediaType.APPLICATION_JSON) }
+                    jsonPath("$[0].accountNumber") {value("123")}
+                }
+        }
+    }
 
-    }
-    
-    @Test
-    fun `should return all banks`(){
-         // when/then
-        mockMvc.get("/api/banks/get")
-            .andDo { print() }
-            .andExpect {
-                status { isOk() }
-                content { contentType(MediaType.APPLICATION_JSON) }
-                jsonPath("$[0].accountNumber") {value("123")}
-            }
-    }
-    
     @Test
     fun `should return the bank with given account number`(){
          // given
