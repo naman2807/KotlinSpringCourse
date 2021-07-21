@@ -76,7 +76,17 @@ internal class BankControllerTest{
     @DisplayName("POST api/banks/post")
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     inner class PostBank{
-
+        @Test
+        fun `should `(){
+             // given
+             
+             
+             // when
+             
+             
+             // then
+             
+        }
     }
 
 }
