@@ -24,8 +24,20 @@ internal class BankControllerTest{
             .andExpect {
                 status { isOk() }
                 content { contentType(MediaType.APPLICATION_JSON) }
-                jsonPath("${0}.accountNumber") {value("123")}
+                jsonPath("$[0].accountNumber") {value("123")}
             }
+    }
+    
+    @Test
+    fun `should `(){
+         // given
+         
+         
+         // when
+         
+         
+         // then
+         
     }
 }
 
