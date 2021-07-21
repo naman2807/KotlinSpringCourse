@@ -1,5 +1,6 @@
 package agarwal.naman.springlearning.springcourseinkotlin.controller
 
+import agarwal.naman.springlearning.springcourseinkotlin.model.Bank
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Nested
@@ -79,10 +80,10 @@ internal class BankControllerTest{
         @Test
         fun `should add the bank`(){
              // given
-             
+             val newBank = Bank("1234",2.3,5)
              
              // when
-             
+
              
              // then
              
