@@ -73,7 +73,7 @@ internal class BankControllerTest{
     }
 
     @Nested
-    @DisplayName("")
+    @DisplayName("POST api/banks/post")
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     inner class PostBank{
 
