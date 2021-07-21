@@ -19,6 +19,9 @@ class MockBankDataSource: BankDataSource {
                         Bank("456",1.0,0))
 
     override fun retrieveBanks(): Collection<Bank> = banks
+    override fun getBank(accountNumber: String): Bank {
+        TODO("Not yet implemented")
+    }
 }
 
 //@Repository marks MockBankDataSource class as Spring Boot bean. So this adds it to application context
