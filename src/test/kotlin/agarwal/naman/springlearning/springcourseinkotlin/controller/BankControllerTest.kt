@@ -21,7 +21,7 @@ internal class BankControllerTest{
     lateinit var mockMvc: MockMvc
 
     @Nested
-    @DisplayName("getBanks()")
+    @DisplayName("GET api/banks/get")
     @TestInstance(PER_CLASS)
     inner class GetBanks{
         @Test
@@ -38,7 +38,7 @@ internal class BankControllerTest{
     }
 
     @Nested
-    @DisplayName("getBank()")
+    @DisplayName("GET api/banks/get/accountNumber")
     @TestInstance(PER_CLASS)
     inner class GetBank{
         @Test
@@ -70,6 +70,13 @@ internal class BankControllerTest{
                 }
              
         }
+    }
+
+    @Nested
+    @DisplayName("")
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    inner class PostBank{
+
     }
 
 }
