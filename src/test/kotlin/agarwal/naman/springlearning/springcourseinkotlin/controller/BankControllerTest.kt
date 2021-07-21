@@ -77,7 +77,7 @@ internal class BankControllerTest{
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     inner class PostBank{
         @Test
-        fun `should `(){
+        fun `should add the bank`(){
              // given
              
              
