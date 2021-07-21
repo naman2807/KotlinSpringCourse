@@ -36,6 +36,7 @@ internal class BankControllerTest{
          // when
          mockMvc.get("/api/banks/$accountNumber")
              .andDo { print() }
+             .andExpect { status { isOk() } }
          
          // then
          
