@@ -62,10 +62,8 @@ internal class BankControllerTest{
              // given
              val accountNumber = "does_not_exist"
              
-             // when
-
-             
-             // then
+             // when/then
+            mockMvc.get("/api/banks/get/$accountNumber")
              
         }
     }
