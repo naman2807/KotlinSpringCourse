@@ -34,7 +34,7 @@ internal class BankControllerTest{
          val accountNumber = "1234"
          
          // when
-         
+         mockMvc.get("/api/banks/$accountNumber")
          
          // then
          
