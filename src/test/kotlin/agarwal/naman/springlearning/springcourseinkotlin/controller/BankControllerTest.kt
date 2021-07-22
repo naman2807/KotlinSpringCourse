@@ -116,6 +116,13 @@ internal class BankControllerTest @Autowired constructor(
         }
     }
 
+    @Nested
+    @DisplayName("")
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+    inner class PatchExistingBank{
+
+    }
+
 }
 
 /**
