@@ -38,6 +38,8 @@ class BankController(private val service: BankService) {
     @PostMapping("/post")
     @ResponseStatus(HttpStatus.CREATED)
     fun addBank(@RequestBody bank: Bank) : Bank = service.addBank(bank)
+
+    fun updateBank(@RequestBody bank: Bank): Bank =
 }
 
 /**
