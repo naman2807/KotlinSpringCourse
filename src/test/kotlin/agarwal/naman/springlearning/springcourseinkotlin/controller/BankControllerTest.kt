@@ -100,7 +100,7 @@ internal class BankControllerTest @Autowired constructor(
         }
         
         @Test
-        fun `should `(){
+        fun `should return BAD REQUEST if bank with given account number already exist`(){
              // given
              
              
