@@ -189,6 +189,7 @@ internal class BankControllerTest @Autowired constructor(
              // when/then
             mockMvc.delete("/api/banks/delete/$accountNumber")
                 .andDo { print() }
+                .andExpect { status { isNotFound() } }
              
         }
     }
