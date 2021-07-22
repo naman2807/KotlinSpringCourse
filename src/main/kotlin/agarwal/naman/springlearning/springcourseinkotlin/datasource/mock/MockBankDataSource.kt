@@ -3,6 +3,7 @@ package agarwal.naman.springlearning.springcourseinkotlin.datasource.mock;
 import agarwal.naman.springlearning.springcourseinkotlin.datasource.BankDataSource
 import agarwal.naman.springlearning.springcourseinkotlin.model.Bank
 import org.springframework.stereotype.Repository
+import java.lang.IllegalArgumentException
 
 /**
 Created By: Naman Agarwal
@@ -25,6 +26,9 @@ class MockBankDataSource: BankDataSource {
             ?: throw NoSuchElementException("No bank account found with account number: $accountNumber")
 
     override fun addBank(bank: Bank): Bank {
+        if(banks.any { it.accountNumber == bank.accountNumber }){
+            throw IllegalArgumentException("Bank with given account number: ${bank.accountNumber} already exist.")
+        }
         banks.add(bank)
         return bank
     }
