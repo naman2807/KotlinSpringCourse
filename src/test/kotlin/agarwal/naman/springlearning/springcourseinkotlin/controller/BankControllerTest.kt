@@ -83,14 +83,18 @@ internal class BankControllerTest @Autowired constructor(
              // given
              val newBank = Bank("1234",2.3,5)
              
-             // when/then
-            mockMvc.post("api/banks/post"){
+             // when
+            val response = mockMvc.post("api/banks/post"){
                 contentType = MediaType.APPLICATION_JSON
-                content = newBank
+                content = objectMapper.writeValueAsString(newBank)
             }
+
+            // then
+            response
                 .andDo { print() }
                 .andExpect {
                     status { isCreated() }
+                    content { contentType(MediaType.APPLICATION_JSON) }
                 }
              
         }
@@ -114,4 +118,6 @@ internal class BankControllerTest @Autowired constructor(
  * that this MockMvc variable is uninitialized and it will throw error ).
  * To create object of MockMvc, we use this annotation. Without this annotation,
  * @Autowired notation will also not work.
+ *
+ * ObjectMapper: Used for serialization and deserialization of objects
  */
