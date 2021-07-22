@@ -149,7 +149,7 @@ internal class BankControllerTest @Autowired constructor(
         }
         
         @Test
-        fun `should `(){
+        fun `should return NOT FOUND if the bank does not exist `(){
              // given
              
              
