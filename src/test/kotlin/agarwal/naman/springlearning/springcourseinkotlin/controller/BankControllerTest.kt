@@ -100,6 +100,9 @@ internal class BankControllerTest @Autowired constructor(
                     content { contentType(MediaType.APPLICATION_JSON) }
                     jsonPath("$.accountNumber") {value("1234")}
                 }
+
+            mockMvc.get("/api/banks/get/${newBank.accountNumber}")
+                .andExpect { content { json(objectMapper.writeValueAsString(newBank)) } }
         }
         
         @Test
