@@ -32,9 +32,15 @@ class BankController(private val service: BankService) {
 
     @PostMapping("/post")
     @ResponseStatus(HttpStatus.CREATED)
-    fun addBank(@RequestBody bank: Bank) : Bank = bank
+    fun addBank(@RequestBody bank: Bank) : Bank = service.addBank(bank)
 }
 
 /**
+ * @RequestBody: Deserializes the object from Json to actual object. Here bank is converted from Json
+ * form to actual kotlin object.
+ *
+ * @PathVariable: Takes the value from URL. Variable name and path ame should be same
+ * (here accountNumber).
+ *
  * @RestController: Tells spring boot to consider it as a bean and it will be part of application context.
  */
