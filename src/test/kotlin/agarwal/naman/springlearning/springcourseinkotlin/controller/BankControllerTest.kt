@@ -107,6 +107,7 @@ internal class BankControllerTest @Autowired constructor(
              // when
              mockMvc.post("/api/banks/post"){
                  contentType = MediaType.APPLICATION_JSON
+                 content = objectMapper.writeValueAsString(invalidBank)
              }
              
              // then
