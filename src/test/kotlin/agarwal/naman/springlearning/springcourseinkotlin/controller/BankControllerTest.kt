@@ -117,7 +117,7 @@ internal class BankControllerTest @Autowired constructor(
     }
 
     @Nested
-    @DisplayName("")
+    @DisplayName("PATCH api/banks/patch")
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     inner class PatchExistingBank{
 
