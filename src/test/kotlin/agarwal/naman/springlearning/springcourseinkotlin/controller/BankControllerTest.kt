@@ -171,7 +171,7 @@ internal class BankControllerTest @Autowired constructor(
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     inner class DeleteBank{
         @Test
-        fun `should `(){
+        fun `should delete the bank with given account number`(){
              // given
              
              
