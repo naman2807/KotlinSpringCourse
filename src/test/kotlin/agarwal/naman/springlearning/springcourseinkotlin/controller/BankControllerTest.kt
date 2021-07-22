@@ -17,7 +17,9 @@ import org.springframework.test.web.servlet.post
 
 @SpringBootTest
 @AutoConfigureMockMvc
-internal class BankControllerTest{
+internal class BankControllerTest @Autowired constructor(
+
+){
 
     @Autowired
     lateinit var mockMvc: MockMvc
