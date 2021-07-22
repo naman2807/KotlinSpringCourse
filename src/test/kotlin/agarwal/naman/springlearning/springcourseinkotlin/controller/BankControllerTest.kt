@@ -173,10 +173,10 @@ internal class BankControllerTest @Autowired constructor(
         @Test
         fun `should delete the bank with given account number`(){
              // given
-             
+             val accountNumber = 123
              
              // when
-             
+
              
              // then
              
