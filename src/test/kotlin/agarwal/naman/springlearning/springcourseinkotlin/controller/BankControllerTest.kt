@@ -112,7 +112,7 @@ internal class BankControllerTest @Autowired constructor(
              
              // then
              response.andDo { print() }
-                 .andExpect { status {  } }
+                 .andExpect { status { isBadRequest() } }
         }
     }
 
