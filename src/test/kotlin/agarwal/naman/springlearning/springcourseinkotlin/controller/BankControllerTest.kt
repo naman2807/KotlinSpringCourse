@@ -149,7 +149,7 @@ internal class BankControllerTest @Autowired constructor(
                 }
 
             mockMvc.get("/api/banks/get/${updatedBank.accountNumber}")
-                .andExpect {  }
+                .andExpect { content {  } }
         }
     }
 
