@@ -14,7 +14,7 @@ Date: 08-07-2021
 
 @Repository
 class MockBankDataSource: BankDataSource {
-    val banks = listOf(Bank("123", 1.2, 1),
+    val banks = mutableListOf(Bank("123", 1.2, 1),
                         Bank("234",2.3,2),
                         Bank("456",1.0,0))
 
@@ -25,7 +25,8 @@ class MockBankDataSource: BankDataSource {
             ?: throw NoSuchElementException("No bank account found with account number: $accountNumber")
 
     override fun addBank(bank: Bank): Bank {
-
+        banks.add(bank)
+        return bank
     }
 
 
