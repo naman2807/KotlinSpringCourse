@@ -170,7 +170,17 @@ internal class BankControllerTest @Autowired constructor(
     @DisplayName("DELETE api/banks/delete/accountNumber")
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     inner class DeleteBank{
-
+        @Test
+        fun `should `(){
+             // given
+             
+             
+             // when
+             
+             
+             // then
+             
+        }
     }
 
 }
