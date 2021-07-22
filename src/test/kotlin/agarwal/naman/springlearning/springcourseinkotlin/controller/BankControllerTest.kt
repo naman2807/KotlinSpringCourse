@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.MediaType
+import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
+import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.json
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.get
 import org.springframework.test.web.servlet.patch
@@ -113,7 +115,14 @@ internal class BankControllerTest @Autowired constructor(
              
              // then
              response.andDo { print() }
-                 .andExpect { status { isBadRequest() } }
+                 .andExpect {
+                     status { isBadRequest() }
+                     content {
+                         contentType(MediaType.APPLICATION_JSON)
+                         json(objectMapper.writeValueAsString(invalidBank))
+                     }
+
+                 }
         }
     }
 
