@@ -39,6 +39,8 @@ class MockBankDataSource: BankDataSource {
 
         banks.remove(currentBank)
         banks.add(bank)
+
+        return bank
     }
 
 
