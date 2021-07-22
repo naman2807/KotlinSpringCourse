@@ -38,6 +38,7 @@ class MockBankDataSource: BankDataSource {
             ?:throw NoSuchElementException("No bank with account number: ${bank.accountNumber} exists.")
 
         banks.remove(currentBank)
+        banks.add(bank)
     }
 
 
