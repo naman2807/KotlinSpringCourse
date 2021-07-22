@@ -105,7 +105,9 @@ internal class BankControllerTest @Autowired constructor(
              val invalidBank = Bank("123", 2.3,2)
              
              // when
-             mockMvc.post("/api/banks/post")
+             mockMvc.post("/api/banks/post"){
+                 contentType = MediaType.APPLICATION_JSON
+             }
              
              // then
              
