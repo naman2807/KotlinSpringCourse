@@ -121,7 +121,7 @@ internal class BankControllerTest @Autowired constructor(
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     inner class PatchExistingBank{
         @Test
-        fun `should `(){
+        fun `should update an existing bank`(){
              // given
              
              
