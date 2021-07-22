@@ -130,7 +130,7 @@ internal class BankControllerTest @Autowired constructor(
             mockMvc.patch("/api/banks/patch/$accountNumber")
                 .andDo { print() }
                 .andExpect {
-                    status {  }
+                    status { isOk() }
                 }
              
              // then
