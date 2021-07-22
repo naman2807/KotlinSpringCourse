@@ -174,6 +174,7 @@ internal class BankControllerTest @Autowired constructor(
              
              // when
             mockMvc.delete("/api/banks/delete/$accountNumber")
+                .andDo { print() }
              
              // then
              
