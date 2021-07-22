@@ -180,6 +180,18 @@ internal class BankControllerTest @Autowired constructor(
             mockMvc.get("/api/banks/get/$accountNumber")
                 .andExpect { status { isNotFound() } }
         }
+        
+        @Test
+        fun `should `(){
+             // given
+             
+             
+             // when
+             
+             
+             // then
+             
+        }
     }
 
 }
