@@ -167,7 +167,7 @@ internal class BankControllerTest @Autowired constructor(
     }
 
     @Nested
-    @DisplayName("")
+    @DisplayName("DELETE api/banks/delete/accountNumber")
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     inner class DeleteBank{
 
