@@ -84,7 +84,7 @@ internal class BankControllerTest @Autowired constructor(
              val newBank = Bank("1234",2.3,5)
              
              // when
-            val response = mockMvc.post("api/banks/post"){
+            val response = mockMvc.post("/api/banks/post"){
                 contentType = MediaType.APPLICATION_JSON
                 content = objectMapper.writeValueAsString(newBank)
             }
@@ -97,6 +97,17 @@ internal class BankControllerTest @Autowired constructor(
                     content { contentType(MediaType.APPLICATION_JSON) }
                     jsonPath("$.accountNumber") {value("1234")}
                 }
+        }
+        
+        @Test
+        fun `should `(){
+             // given
+             
+             
+             // when
+             
+             
+             // then
              
         }
     }
