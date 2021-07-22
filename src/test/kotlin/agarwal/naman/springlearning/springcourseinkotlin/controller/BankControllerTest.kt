@@ -124,17 +124,20 @@ internal class BankControllerTest @Autowired constructor(
         @Test
         fun `should update an existing bank`(){
              // given
-             val accountNumber = 123
+             val updatedBank = Bank("123",2.3,2)
              
              // when
-            mockMvc.patch("/api/banks/patch/$accountNumber")
+            val responsePatch = mockMvc.patch("/api/banks/patch"){
+                contentType = MediaType.APPLICATION_JSON
+                content = objectMapper.writeValueAsString(updatedBank)
+            }
+
+            // then
+            responsePatch
                 .andDo { print() }
                 .andExpect {
                     status { isOk() }
                 }
-             
-             // then
-             
         }
     }
 
