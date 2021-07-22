@@ -29,6 +29,8 @@ class BankController(private val service: BankService) {
 
     @GetMapping("/get/{accountNumber}")
     fun getBank(@PathVariable accountNumber : String): Bank = service.getBank(accountNumber)
+
+    fun addBank(@RequestBody bank: Bank) : Bank = bank
 }
 
 /**
