@@ -154,12 +154,14 @@ internal class BankControllerTest @Autowired constructor(
              val invalidBank = Bank("does_not_exist",2.3,2)
              
              // when
-            mockMvc.patch("/api/banks/patch"){
+            val response = mockMvc.patch("/api/banks/patch"){
                 contentType = MediaType.APPLICATION_JSON
                 content = objectMapper.writeValueAsString(invalidBank)
             }
              
              // then
+            response.andDo { print() }
+                .andExpect { status { isNotFound() } }
              
         }
     }
