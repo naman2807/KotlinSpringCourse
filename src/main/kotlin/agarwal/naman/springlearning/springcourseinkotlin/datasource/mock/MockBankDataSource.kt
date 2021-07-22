@@ -24,6 +24,10 @@ class MockBankDataSource: BankDataSource {
         banks.firstOrNull() {it.accountNumber == accountNumber}
             ?: throw NoSuchElementException("No bank account found with account number: $accountNumber")
 
+    override fun addBank(bank: Bank): Bank {
+
+    }
+
 
 }
 
