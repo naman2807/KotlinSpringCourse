@@ -123,10 +123,9 @@ internal class BankControllerTest @Autowired constructor(
         @Test
         fun `should update an existing bank`(){
              // given
-             
+             val accountNumber = 123
              
              // when
-             
              
              // then
              
