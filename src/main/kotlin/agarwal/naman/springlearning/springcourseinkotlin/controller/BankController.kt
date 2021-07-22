@@ -31,6 +31,7 @@ class BankController(private val service: BankService) {
     fun getBank(@PathVariable accountNumber : String): Bank = service.getBank(accountNumber)
 
     @PostMapping("/post")
+    @ResponseStatus(HttpStatus.CREATED)
     fun addBank(@RequestBody bank: Bank) : Bank = bank
 }
 
