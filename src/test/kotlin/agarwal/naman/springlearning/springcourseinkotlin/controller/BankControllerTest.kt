@@ -176,6 +176,9 @@ internal class BankControllerTest @Autowired constructor(
             mockMvc.delete("/api/banks/delete/$accountNumber")
                 .andDo { print() }
                 .andExpect { status { isNoContent() } }
+
+            mockMvc.get("/api/banks/get/$accountNumber")
+                .andExpect { status { isNotFound() } }
         }
     }
 
