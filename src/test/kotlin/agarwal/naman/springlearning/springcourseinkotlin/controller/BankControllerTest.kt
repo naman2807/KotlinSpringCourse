@@ -156,6 +156,7 @@ internal class BankControllerTest @Autowired constructor(
              // when
             mockMvc.patch("/api/banks/patch"){
                 contentType = MediaType.APPLICATION_JSON
+                content = objectMapper.writeValueAsString(invalidBank)
             }
              
              // then
