@@ -18,12 +18,8 @@ import org.springframework.test.web.servlet.post
 @SpringBootTest
 @AutoConfigureMockMvc
 internal class BankControllerTest @Autowired constructor(
-
+        val mockMvc: MockMvc
 ){
-
-    @Autowired
-    lateinit var mockMvc: MockMvc
-
     @Nested
     @DisplayName("GET api/banks/get")
     @TestInstance(PER_CLASS)
