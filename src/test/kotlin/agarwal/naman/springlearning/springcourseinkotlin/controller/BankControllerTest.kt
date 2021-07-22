@@ -95,6 +95,7 @@ internal class BankControllerTest @Autowired constructor(
                 .andExpect {
                     status { isCreated() }
                     content { contentType(MediaType.APPLICATION_JSON) }
+                    jsonPath("$.accountNumber") {value("1234")}
                 }
              
         }
