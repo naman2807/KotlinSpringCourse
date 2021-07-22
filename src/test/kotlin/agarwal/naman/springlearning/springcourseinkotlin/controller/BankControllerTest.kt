@@ -147,6 +147,8 @@ internal class BankControllerTest @Autowired constructor(
                 .andExpect {
                     status { isOk() }
                 }
+
+            mockMvc.get("/api/banks/get/${updatedBank.accountNumber}")
         }
     }
 
