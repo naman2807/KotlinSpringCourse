@@ -151,10 +151,9 @@ internal class BankControllerTest @Autowired constructor(
         @Test
         fun `should return NOT FOUND if the bank does not exist `(){
              // given
-             
+             val invalidBank = Bank("does_not_exist",2.3,2)
              
              // when
-             
              
              // then
              
