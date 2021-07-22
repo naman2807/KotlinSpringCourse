@@ -120,7 +120,17 @@ internal class BankControllerTest @Autowired constructor(
     @DisplayName("PATCH api/banks/patch")
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     inner class PatchExistingBank{
-
+        @Test
+        fun `should `(){
+             // given
+             
+             
+             // when
+             
+             
+             // then
+             
+        }
     }
 
 }
