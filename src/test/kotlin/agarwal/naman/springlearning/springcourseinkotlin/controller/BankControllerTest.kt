@@ -1,6 +1,7 @@
 package agarwal.naman.springlearning.springcourseinkotlin.controller
 
 import agarwal.naman.springlearning.springcourseinkotlin.model.Bank
+import com.fasterxml.jackson.databind.ObjectMapper
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Nested
@@ -18,7 +19,8 @@ import org.springframework.test.web.servlet.post
 @SpringBootTest
 @AutoConfigureMockMvc
 internal class BankControllerTest @Autowired constructor(
-        val mockMvc: MockMvc
+        val mockMvc: MockMvc,
+        val objectMapper: ObjectMapper
 ){
     @Nested
     @DisplayName("GET api/banks/get")
