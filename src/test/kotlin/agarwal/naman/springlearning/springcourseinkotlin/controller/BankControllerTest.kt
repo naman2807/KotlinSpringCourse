@@ -102,7 +102,7 @@ internal class BankControllerTest @Autowired constructor(
         @Test
         fun `should return BAD REQUEST if bank with given account number already exist`(){
              // given
-             
+             val invalidBank = Bank("123", 2.3,2)
              
              // when
              
