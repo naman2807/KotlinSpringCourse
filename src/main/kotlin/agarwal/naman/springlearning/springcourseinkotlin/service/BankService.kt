@@ -22,6 +22,10 @@ class BankService(private val bankDataSource: BankDataSource) {
         }
 
         fun addBank(bank: Bank): Bank = bankDataSource.addBank(bank)
+
+        fun updateBank(bank: Bank): Bank {
+
+        }
 }
 
 // @Service: Like @Repository annotation, it tells spring boot to make this bean/class or an object of
