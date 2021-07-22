@@ -84,7 +84,10 @@ internal class BankControllerTest{
              val newBank = Bank("1234",2.3,5)
              
              // when/then
-            mockMvc.post("api/banks/post")
+            mockMvc.post("api/banks/post"){
+                contentType = MediaType.APPLICATION_JSON
+                content = newBank
+            }
                 .andDo { print() }
                 .andExpect {
                     status { isCreated() }
